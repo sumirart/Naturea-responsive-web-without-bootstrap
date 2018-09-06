@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,700,900');
+
+* {
+    box-sizing: border-box;
+    transition: all ease-in-out 150ms;
+}
+
+body {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 95%;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+.clearfix::after,
+section::after,
+footer::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+
+
+/* TYPOGRAPHY
+======================== */
+header p.logo {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: .5rem;
+    color: #011627;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 2rem;
+    margin-top: 0;
+    color: #fff;
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    display: block;
+}
+
+p {
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+p:last-of-type {
+    margin-bottom: 0;
+}
+
+h1 span,
+h2 span {
+    font-weight: 300;
+    display: block;
+    font-size: .9em;
+}
+
+.unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+@media (min-width: 562px){ /* 35rem */
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* BUTTONS */
+.button {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-width: 2px;
+    border-style: solid;
+    padding: .5em 1.75em;
+}
+
+.button-small {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+.button-jumbotron {
+    color: #011627;
+    border-color: #011627;
+}
+
+.button-port {
+    color: #fff;
+}
+
+.button:hover,
+.button:focus {
+    background: #001627;
+    border-color: #001627;
+    color: #fff;
+}
+
+@media (min-width: 45rem){
+    h2 {
+        font-size: 2.3rem;       
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .button-jumbotron {
+        font-size: 1.5rem;
+    }
+
+    .button-port {
+        font-size: 1rem;
+    }
+
+    figcaption.portfolio-desc p{
+        font-size: 1.3rem;
+        margin: .5em;
+    }
+}
+
+
+/* HEADER
+======================== */
+.parallax--bg,
+.parallax--box {
+    transition: none;
+}
+
+
+
+/* HEADER
+======================== */
+header {
+    position: absolute;
+    margin: 1em;
+    left: 0;
+    right: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-top: .5rem;
+}
+
+nav a {
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    padding: 1rem;
+    color: #000;
+}
+
+nav a:hover,
+nav a:focus {
+    color: rgb(54, 54, 54);
+}
+
+@media (min-width: 45rem) {
+    .logo {
+        float: left;
+    }
+
+    nav {
+        float: right;
+    }
+}
+
+
+/* JUMBOTRON
+======================== */
+.jumbotron {
+    background-image: url('./img/bg-jumbotron.jpeg');
+    background-size: cover;
+    background-position: center 0;
+    padding: 10em 3em 5em;
+    color: #011627;
+}
+
+@media (min-width: 1024px){
+    .jumbotron{
+        height: 100vh;
+        padding-top: 35vh;
+    }
+}
+
+
+
+/* ABOUT
+======================== */
+.about-textbox {
+    background-color: #011627;
+    padding: 3em 1em;
+    width: 100vw;
+    margin-left: -2.5%;
+    color: #fff;
+    position: relative;
+    outline: 2px solid #fff;
+    outline-offset: -1em;
+}
+
+.about-textbox h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 .25em;
+    top: -.75em;
+    background: #001627;
+}
+
+.about-textbox p {
+    margin: 0 .5em;
+}
+
+@media(min-width: 45rem){
+    .about-textbox h2 {
+        padding: 0 .5em;
+    }
+
+    .about-textbox {
+        outline-offset: -1.5em;
+    }
+}
+
+@media (min-width: 1024px) {
+    .about {
+        background-image: url('./img/bg-about.jpeg');
+        background-repeat: no-repeat;
+        padding-bottom: 5em;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .about-textbox {
+        width: 50%;
+        padding: 5em;
+        outline-offset: -2em;
+        top: -4em;
+        text-align: left;
+        box-shadow: 0 0 4em 0 rgba(0, 0, 0, .3);
+    }
+
+    .about-textbox h2 {
+        top: -.5em;
+        left: 5rem;
+        transform: translateX(0)
+    }
+}
+
+/* PORTFOLIO
+======================== */
+.portfolio {
+    margin: 2em 0 0;
+    display: block;
+}
+
+.portfolio-item {
+    margin: 0;
+    position: relative;
+}
+
+.portfolio-item img {
+    display: block;
+}
+
+.portfolio-desc {
+    position: absolute;
+    z-index: 100;
+    bottom: 0em;
+    left: 0em;
+    right: 0em;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    padding-bottom: 1em;
+}
+
+.portfolio-desc p {
+    margin: 1em;
+    font-weight: 700;
+}
+
+@media (min-width: 480px){ /* 30rem */
+    .flex{
+        display: flex;
+        flex-flow: column wrap;
+        max-height: 550px;
+    }
+
+    .portfolio-item{
+        width: 50%;
+    }
+}
+
+@media (min-width: 562px){ /* 35rem */
+    .flex{
+        max-height: 650px;
+    }
+}
+
+@media (min-width: 664px){ /* 35rem */
+    .flex{
+        max-height: 760px;
+    }
+}
+
+@media (min-width: 768px){ /* 48 rem */
+    .flex{
+        max-height: 860px;
+    }
+}
+
+@media (min-width: 879px){ /* 48 rem */
+    .flex{
+        max-height: 1020px;
+    }
+}
+
+@media (min-width: 1024px){ /* 64 rem */
+    .flex{
+        display: block;
+    }
+
+    .portfolio-item:first-of-type {
+        height: 100%;
+    }
+
+    .portfolio-item{
+        float: left;
+        width: 33.3333334%;
+        overflow: hidden;
+        height: 50%;
+    }
+
+    .portfolio-desc {
+        transform: translateY(150%);
+    }
+
+    .portfolio-item:hover .portfolio-desc{
+        transform: translateY(0%)
+    }
+}
+
+
+/* CTA
+======================== */
+.cta {
+    padding: 3em 0;
+}
+
+
+
+/* FOOTER
+======================== */
+footer {
+    background: #001627;
+    color: #fff;
+    padding: 3em 0;
+}
+
+footer li {
+    margin: .5em;
+    display: inline-block;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #fff;
+    font-size: .8rem;
+}
+
+footer p {
+    margin-top: 1em;
+    font-size: .6rem;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #7c7c7c
+}
+
+@media (min-width: 45rem){
+    footer a {
+        font-size: 1rem;
+    }
+
+    footer p {
+        font-size: .8rem;
+    }
+}
